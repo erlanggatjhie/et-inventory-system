@@ -5,7 +5,7 @@ import * as Curry from "bs-platform/lib/es6/curry.js";
 import * as React from "react";
 import * as ReasonReact from "reason-react/src/ReasonReact.js";
 
-var component = ReasonReact.reducerComponent("Example");
+var component = ReasonReact.reducerComponent("AnotherHelloWorld");
 
 function make(greeting, _) {
   return /* record */[
@@ -19,7 +19,7 @@ function make(greeting, _) {
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function (self) {
-              var message = "You've clicked this " + (String(self[/* state */2][/* count */0]) + " times(s)");
+              var message = "You have clicked this " + (String(self[/* state */2][/* count */0]) + " time(s)");
               var match = self[/* state */2][/* show */1];
               return React.createElement("div", undefined, React.createElement("button", {
                               onClick: (function () {
@@ -29,7 +29,7 @@ function make(greeting, _) {
                               onClick: (function () {
                                   return Curry._1(self[/* send */4], /* Toggle */1);
                                 })
-                            }, "Toggle greeting"), match ? greeting : null);
+                            }, "Toggle Greeting"), match ? greeting : null);
             }),
           /* initialState */(function () {
               return /* record */[
