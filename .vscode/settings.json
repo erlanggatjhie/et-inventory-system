@@ -1,16 +1,13 @@
 {
-    "editor.formatOnSave": true,
-    "[html]": {
-        "editor.formatOnSave": false
-    },
-    "reason.codelens.enabled": true,
-    "reason.diagnostics.tools": [
-        "merlin",
-        "bsb"
-    ],
-    "files.insertFinalNewline": true,
-    "flow.enabled": false,
-    "editor.tabSize": 2,
-    "editor.detectIndentation": false,
-    "git.ignoreLimitWarning": true
-  }
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "reason.codelens.enabled": true,
+  "reason.diagnostics.tools": ["merlin", "bsb"],
+  "files.insertFinalNewline": true,
+  "flow.enabled": false,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "git.ignoreLimitWarning": true
+}
