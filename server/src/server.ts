@@ -1,5 +1,5 @@
-var express = require('express');
-var db = require('./models');
+import express from 'express';
+import db from './models';
 
 var app = express();
 

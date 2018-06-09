@@ -1,5 +1,6 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
+import { Sequelize, DataTypes } from 'Sequelize';
+
+const User = (sequelize: Sequelize, DataTypes: DataTypes) => {
   var User = sequelize.define(
     'User',
     {
@@ -13,3 +14,5 @@ module.exports = (sequelize, DataTypes) => {
   };
   return User;
 };
+
+export default User;
