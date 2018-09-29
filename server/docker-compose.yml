@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres_dev:
+    image: 'postgres:10.5'
+    ports:
+      - '5433:5432'
+    environment:
+      - POSTGRES_PASSWORD=helloworld
+  postgres_test:
+    image: 'postgres:10.5'
+    ports:
+      - '5434:5432'
+    environment:
+      - POSTGRES_USER=postgres_test
+      - POSTGRES_PASSWORD=helloworld
+      - POSTGRES_DB=postgres_test

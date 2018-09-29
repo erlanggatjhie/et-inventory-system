@@ -1,18 +1,30 @@
-import { Sequelize, DataTypes } from 'Sequelize';
+import * as Sequelize from 'sequelize';
+import db from './db';
+export interface UserAttributes {
+  id?: string;
+  userName: string;
+  passwordHash: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
 
-const User = (sequelize: Sequelize, DataTypes: DataTypes) => {
-  var User = sequelize.define(
-    'User',
-    {
-      userName: DataTypes.STRING,
-      passwordHash: DataTypes.STRING
+type UserInstance = Sequelize.Instance<UserAttributes> & UserAttributes;
+
+const User = db.define<UserInstance, UserAttributes>(
+  'User',
+  {
+    id: {
+      type: Sequelize.UUID,
+      primaryKey: true,
+      defaultValue: Sequelize.UUIDV4
     },
-    {}
-  );
-  User.associate = function(models) {
-    // associations can be defined here
-  };
-  return User;
+    userName: Sequelize.STRING,
+    passwordHash: Sequelize.STRING
+  },
+  {}
+);
+User.associate = function() {
+  // associations can be defined here
 };
 
 export default User;

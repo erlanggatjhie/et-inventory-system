@@ -7,15 +7,18 @@ const config: { [index: string]: Options } = {
     database: 'postgres',
     host: 'localhost',
     port: 5433,
-    dialect: 'postgres'
+    dialect: 'postgres',
+    operatorsAliases: false
   },
   test: {
-    username: 'database_test',
-    password: 'testtest',
-    database: 'database_test',
-    host: '127.0.0.1',
-    port: 5433,
-    dialect: 'postgres'
+    username: 'postgres_test',
+    password: 'helloworld',
+    database: 'postgres_test',
+    host: 'localhost',
+    port: 5434,
+    dialect: 'postgres',
+    operatorsAliases: false,
+    logging: false
   },
   production: {
     username: process.env.DB_USERNAME,
@@ -23,7 +26,9 @@ const config: { [index: string]: Options } = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOSTNAME,
     port: Number(process.env.DB_PORT),
-    dialect: 'postgres'
+    dialect: 'postgres',
+    operatorsAliases: false,
+    logging: false
   }
 };
 
